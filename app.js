@@ -1067,7 +1067,7 @@ function openDetailModal(caseId) {
     <div class="mb-6 p-5 rounded-2xl bg-gradient-to-b from-neutral-900/90 to-neutral-950/90 border border-emerald-500/30 shadow-xl">
       <div class="flex items-center justify-between mb-3 pb-2 border-b border-neutral-800">
         <h3 class="text-sm font-bold text-emerald-300 flex items-center">
-          <span class="mr-2">✨</span> ${t('modal_sim_title')}
+          <span class="mr-1.5 font-bold">零、</span> ${t('modal_sim_title')}
         </h3>
         <span class="text-[11px] text-neutral-400 font-mono">Engine: ${escapeHtml(promptEngine)}</span>
       </div>
