@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RE:CLOTHES 拾衣研究所 — 閒置單品改造與風格穿搭提案所</title>
+  <title>RE:CLOTHES 拾衣研究所 — 閒置單品與配飾改造提案所 (含 AI 視覺模擬圖)</title>
   
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -72,6 +72,10 @@
             <option value="zh-TW">🇹🇼 繁體中文</option>
             <option value="en">🇺🇸 English</option>
             <option value="ja">🇯🇵 日本語</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="ar">🇸🇦 العربية</option>
           </select>
         </div>
 
@@ -105,12 +109,12 @@
         </div>
 
         <h1 data-i18n="hero_title" class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
-          閒置單品改造與風格穿搭重構<br>
-          <span class="text-gradient-emerald">原單品 ➔ 改造／搭配方向</span>
+          閒置單品與配飾改造提案<br>
+          <span class="text-gradient-emerald">原單品 ➔ AI 視覺模擬 ➔ 結構重構</span>
         </h1>
 
         <p data-i18n="hero_desc" class="text-sm sm:text-base text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          每件塵封在衣櫃深處的衣服，都藏著煥然一新的可能性。我們結合商業設計思維與 AI Prompt 靈感生成，提供從「痛點深度拆解」、「穿搭平衡建議」到「免縫紉／微工藝結構改造」的完整指南。
+          每件塵封在衣櫃深處的衣服與老舊配飾，都藏著煥然一新的可能性。我們結合商業設計思維與 AI Prompt 視覺模擬，提供從「痛點深度拆解」、「穿搭平衡建議」到「免縫紉／微工藝結構改造」的完整指南。
         </p>
 
         <!-- 數據統計與核心亮點標籤 -->
@@ -118,15 +122,15 @@
           <div class="glass-card p-3.5 rounded-xl border-neutral-800">
             <div data-i18n="stat_cases" class="text-xs text-neutral-400">目前收錄</div>
             <div class="flex items-baseline space-x-1 mt-0.5">
-              <span id="stat-case-count" class="text-xl font-extrabold text-emerald-400">6</span>
+              <span id="stat-case-count" class="text-xl font-extrabold text-emerald-400">9</span>
               <span class="text-xs text-emerald-400/80 font-medium">items</span>
             </div>
-            <div data-i18n="stat_cases_sub" class="text-[10px] text-neutral-400">經典單品改造庫</div>
+            <div data-i18n="stat_cases_sub" class="text-[10px] text-neutral-400">經典單品與配飾改造庫</div>
           </div>
           <div class="glass-card p-3.5 rounded-xl border-neutral-800">
             <div data-i18n="stat_detail" class="text-xs text-neutral-400">案例詳情頁</div>
             <div class="text-xl font-extrabold text-neutral-100 mt-0.5">4 Dimensions</div>
-            <div data-i18n="stat_detail_sub" class="text-[10px] text-neutral-400">4 大核心維度</div>
+            <div data-i18n="stat_detail_sub" class="text-[10px] text-neutral-400">4 大維度 + AI 模擬圖</div>
           </div>
           <div class="glass-card p-3.5 rounded-xl border-neutral-800">
             <div data-i18n="stat_try" class="text-xs text-neutral-400">試用專區</div>
@@ -151,13 +155,13 @@
         <div>
           <div data-i18n="wall_badge" class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1 flex items-center">
             <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2"></span>
-            FEATURED CASES WALL
+            FEATURED CASES & ACCESSORIES
           </div>
           <h2 data-i18n="wall_title" class="text-2xl sm:text-3xl font-extrabold text-neutral-100">
-            首頁精選案例牆
+            首頁精選案例牆 (含衣物與配飾)
           </h2>
           <p data-i18n="wall_desc" class="text-xs sm:text-sm text-neutral-400 mt-1">
-            每張卡片展示「原單品 → 改造／搭配方向」，點擊即可探索該單品之痛點剖析、搭配與結構構想。
+            每張卡片展示「原單品 → 改造／搭配方向」，並附帶 AI 概念視覺模擬圖，點擊即可探索該單品之痛點剖析、搭配與結構構想。
           </p>
         </div>
 
@@ -184,13 +188,17 @@
         </div>
       </div>
 
-      <!-- 篩選列 -->
+      <!-- 篩選列 (Category Pills & Difficulty & Search Bar) -->
       <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8">
         
-        <!-- 單品分類標籤群 -->
+        <!-- 單品與配飾分類標籤群 -->
         <div class="flex items-center space-x-1.5 overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
           <button data-category="all" data-i18n="cat_all" class="category-pill px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-500 text-neutral-950 transition-all shrink-0">
             全部單品
+          </button>
+          <!-- 🎀 閒置配飾專屬標籤 -->
+          <button data-category="閒置配飾" data-i18n="cat_accessory" class="category-pill px-3.5 py-1.5 rounded-xl text-xs font-medium bg-neutral-800 text-neutral-300 hover:bg-neutral-700 transition-all shrink-0">
+            🎀 閒置配飾
           </button>
           <button data-category="襯衫" data-i18n="cat_shirt" class="category-pill px-3.5 py-1.5 rounded-xl text-xs font-medium bg-neutral-800 text-neutral-300 hover:bg-neutral-700 transition-all shrink-0">
             襯衫
@@ -208,7 +216,7 @@
             洋裝/裙裝
           </button>
           <button data-category="其他" data-i18n="cat_other" class="category-pill px-3.5 py-1.5 rounded-xl text-xs font-medium bg-neutral-800 text-neutral-300 hover:bg-neutral-700 transition-all shrink-0">
-            其他配件
+            其他單品
           </button>
         </div>
 
@@ -222,7 +230,7 @@
           </select>
 
           <div class="relative flex-grow sm:w-64">
-            <input type="text" id="search-input" data-i18n="search_placeholder" placeholder="搜尋單品、痛點或風格..." 
+            <input type="text" id="search-input" data-i18n="search_placeholder" placeholder="搜尋單品、配飾、痛點或風格..." 
               class="w-full bg-neutral-900 border border-neutral-700 text-neutral-200 text-xs rounded-xl pl-8 pr-3 py-2 focus:ring-1 focus:ring-emerald-500 outline-none">
             <svg class="w-4 h-4 text-neutral-500 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -253,26 +261,26 @@
             <span data-i18n="try_badge">✨ 互動試用體驗區</span>
           </div>
           <h2 data-i18n="try_title" class="text-2xl sm:text-3xl font-extrabold text-neutral-100">
-            輸入你的閒置單品，立即獲得專屬改造提案
+            輸入你的閒置單品或配飾，立即獲得專屬改造提案
           </h2>
           <p data-i18n="try_desc" class="text-xs sm:text-sm text-neutral-400 mt-2 max-w-xl mx-auto">
-            衣櫃裡也有不知如何搭配或版型不適的舊衣嗎？填寫你的衣物條件，系統將結合痛點拆解邏輯為你產生專屬搭配、結構微改指南與生圖 Prompt！
+            衣櫃裡也有不知如何搭配或損壞的舊衣、絲巾、老皮帶或鞋款嗎？填寫你的條件，系統將結合痛點拆解為你產生專屬搭配、結構微改指南與生圖 Prompt！
           </p>
 
-          <!-- 快速範例帶入按鈕 -->
+          <!-- 快速範例帶入按鈕 (含衣物與閒置配飾) -->
           <div class="flex flex-wrap items-center justify-center gap-2 mt-4">
             <span data-i18n="try_quick_samples" class="text-xs text-neutral-500">快速帶入範例：</span>
             <button onclick="loadSampleInput(0)" data-i18n="sample_btn_0" class="px-2.5 py-1 rounded-lg text-xs bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 transition-colors">
               👔 過長格子襯衫
             </button>
             <button onclick="loadSampleInput(1)" data-i18n="sample_btn_1" class="px-2.5 py-1 rounded-lg text-xs bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 transition-colors">
-              👗 緊身碎花洋裝
+              🧣 繁複過時絲巾
             </button>
             <button onclick="loadSampleInput(2)" data-i18n="sample_btn_2" class="px-2.5 py-1 rounded-lg text-xs bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 transition-colors">
-              👕 鬆垮荷葉邊白T
+              🪢 磨損老皮帶
             </button>
             <button onclick="loadSampleInput(3)" data-i18n="sample_btn_3" class="px-2.5 py-1 rounded-lg text-xs bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 transition-colors">
-              🧥 寬厚墊肩西裝外套
+              👟 踩破帆布鞋
             </button>
           </div>
         </div>
@@ -284,9 +292,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label data-i18n="try_label_name" class="block text-xs font-bold text-neutral-300 mb-1.5">
-                  1. 你的閒置單品名稱 <span class="text-rose-400">*</span>
+                  1. 你的閒置單品或配飾名稱 <span class="text-rose-400">*</span>
                 </label>
-                <input type="text" id="try-name" data-i18n="try_placeholder_name" required placeholder="例如：買太大的厚重落肩格子襯衫、穿不下的牛仔褲"
+                <input type="text" id="try-name" data-i18n="try_placeholder_name" required placeholder="例如：買太大的厚重落肩格子襯衫、長年沒戴的花絲巾、踩爛的帆布鞋"
                   class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-xs text-neutral-200 focus:ring-1 focus:ring-emerald-500 outline-none">
               </div>
 
@@ -294,7 +302,7 @@
                 <label data-i18n="try_label_mat" class="block text-xs font-bold text-neutral-300 mb-1.5">
                   2. 單品材質與顏色
                 </label>
-                <input type="text" id="try-material" data-i18n="try_placeholder_mat" placeholder="例如：純棉深藍格紋、重磅挺版丹寧、薄雪紡"
+                <input type="text" id="try-material" data-i18n="try_placeholder_mat" placeholder="例如：真絲印花、植鞣牛皮、水洗丹寧、粗針織羊毛"
                   class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-xs text-neutral-200 focus:ring-1 focus:ring-emerald-500 outline-none">
               </div>
             </div>
@@ -303,7 +311,7 @@
               <label data-i18n="try_label_pain" class="block text-xs font-bold text-neutral-300 mb-1.5">
                 3. 目前最主要的痛點或閒置原因 <span class="text-rose-400">*</span>
               </label>
-              <textarea id="try-pain" rows="2" data-i18n="try_placeholder_pain" required placeholder="例如：下擺過長遮住腿部顯得五五身、領口洗鬆下垂、風格過於正式平常無法穿出門..."
+              <textarea id="try-pain" rows="2" data-i18n="try_placeholder_pain" required placeholder="例如：花紋過時顯老氣、後跟磨損嚴重、下擺過長遮腿顯矮..."
                 class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-xs text-neutral-200 focus:ring-1 focus:ring-emerald-500 outline-none"></textarea>
             </div>
 
@@ -312,7 +320,7 @@
                 <label data-i18n="try_label_style" class="block text-xs font-bold text-neutral-300 mb-1.5">
                   4. 期望改造目標或風格氛圍
                 </label>
-                <input type="text" id="try-style" data-i18n="try_placeholder_style" placeholder="例如：日系 CityBoy、俐落短版極簡、甜酷工裝風"
+                <input type="text" id="try-style" data-i18n="try_placeholder_style" placeholder="例如：法式輕奢抓夾包、日系山系 Gorpcore、露跟穆勒鞋"
                   class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-xs text-neutral-200 focus:ring-1 focus:ring-emerald-500 outline-none">
               </div>
 
@@ -321,9 +329,9 @@
                   5. 偏好的處置形式
                 </label>
                 <select id="try-mode" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3.5 py-2.5 text-xs text-neutral-200 focus:ring-1 focus:ring-emerald-500 outline-none">
-                  <option value="穿搭搭配" data-i18n="try_mode_style">👗 零剪裁 · 純穿搭層次搭配 (不破壞衣物)</option>
-                  <option value="結構微改" selected data-i18n="try_mode_craft">✂️ 微工藝 · 局部剪裁與抽繩改造 (初學者友善)</option>
-                  <option value="徹底翻新" data-i18n="try_mode_tailor">🪡 結構翻新 · 拆解重構成配件或兩件式 (進階手工)</option>
+                  <option value="穿搭搭配" data-i18n="try_mode_style">👗 零剪裁 · 純穿搭層次搭配 (不破壞原物)</option>
+                  <option value="結構微改" selected data-i18n="try_mode_craft">✂️ 微工藝 · 局部剪裁或配件組裝 (初學者友善)</option>
+                  <option value="徹底翻新" data-i18n="try_mode_tailor">🪡 結構翻新 · 徹底重塑為新配件或兩件式 (進階手工)</option>
                 </select>
               </div>
             </div>
@@ -365,7 +373,7 @@
         商業設計系 CD000B 第 8 組：吳佳晏（11533216） · 劉是曼 · 洪巧恩 · 楊承歡
       </div>
       <p data-i18n="footer_p3" class="text-[11px] text-neutral-400">
-        作品支援多國語言切換 (繁中/EN/日語) · 完整 CRUD 資料管理 · 本地 LocalStorage 持久化 · 部署於 Vercel
+        收錄閒置單品與配飾改造 · 全站支援 AI 視覺概念模擬圖 · 多國語言 (繁中/EN/日語) · 完整 CRUD
       </p>
     </div>
   </footer>
@@ -398,7 +406,7 @@
       </button>
 
       <h3 id="edit-modal-title" class="text-xl font-bold text-neutral-100 mb-6">
-        ✨ 編輯單品改造案例
+        ✨ 編輯單品或配飾改造案例
       </h3>
 
       <form id="edit-case-form" class="space-y-4">
@@ -406,9 +414,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-semibold text-neutral-300 mb-1">
-              原單品名稱 <span class="text-rose-400">*</span>
+              原單品/配飾名稱 <span class="text-rose-400">*</span>
             </label>
-            <input type="text" id="form-original" required placeholder="如：寬鬆落肩格紋襯衫"
+            <input type="text" id="form-original" required placeholder="如：老舊花色真絲絲巾、寬鬆格紋襯衫"
               class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none focus:ring-1 focus:ring-emerald-500">
           </div>
 
@@ -416,7 +424,7 @@
             <label class="block text-xs font-semibold text-neutral-300 mb-1">
               改造／搭配方向 <span class="text-rose-400">*</span>
             </label>
-            <input type="text" id="form-direction" required placeholder="如：日系短版層次抽繩罩衫"
+            <input type="text" id="form-direction" required placeholder="如：法式雲朵抓夾包、短版抽繩罩衫"
               class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none focus:ring-1 focus:ring-emerald-500">
           </div>
         </div>
@@ -425,12 +433,13 @@
           <div>
             <label class="block text-xs font-semibold text-neutral-300 mb-1">類別</label>
             <select id="form-category" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none">
+              <option value="閒置配飾">🎀 閒置配飾</option>
               <option value="襯衫">襯衫</option>
               <option value="丹寧/牛仔">丹寧/牛仔</option>
               <option value="T恤/衛衣">T恤/衛衣</option>
               <option value="西裝外套">西裝外套</option>
               <option value="洋裝/裙裝">洋裝/裙裝</option>
-              <option value="其他">其他</option>
+              <option value="其他">其他單品</option>
             </select>
           </div>
 
@@ -445,16 +454,16 @@
 
           <div>
             <label class="block text-xs font-semibold text-neutral-300 mb-1">預估時間</label>
-            <input type="text" id="form-time" placeholder="如：40 分鐘"
+            <input type="text" id="form-time" placeholder="如：30 分鐘"
               class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none">
           </div>
         </div>
 
         <div>
           <label class="block text-xs font-semibold text-neutral-300 mb-1">
-            單品痛點分析 (每行一項)
+            痛點分析 (每行一項)
           </label>
-          <textarea id="form-pain" rows="2" placeholder="衣長過長顯矮&#10;格子花色過時缺乏挺度"
+          <textarea id="form-pain" rows="2" placeholder="花紋過時顯老氣&#10;平時穿搭無法駕馭"
             class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none"></textarea>
         </div>
 
@@ -462,20 +471,20 @@
           <label class="block text-xs font-semibold text-neutral-300 mb-1">
             穿搭搭配建議 (每行一項)
           </label>
-          <textarea id="form-styling" rows="2" placeholder="內搭白色高領素色內著&#10;下擺解開打結縮小腰身"
+          <textarea id="form-styling" rows="2" placeholder="搭配純白T恤作亮點&#10;掛在托特包提把上裝飾"
             class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none"></textarea>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-semibold text-neutral-300 mb-1">所需工具 (頓號分隔)</label>
-            <input type="text" id="form-tools" placeholder="布剪、針線、抽繩"
+            <input type="text" id="form-tools" placeholder="剪刀、金屬扣、鬆緊帶"
               class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none">
           </div>
 
           <div>
             <label class="block text-xs font-semibold text-neutral-300 mb-1">結構改造構想步驟 (每行一項)</label>
-            <textarea id="form-steps" rows="2" placeholder="沿肚臍上方裁短&#10;下擺穿入抽繩收口"
+            <textarea id="form-steps" rows="2" placeholder="對折四角打結&#10;穿入金屬提把固定"
               class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-200 outline-none"></textarea>
           </div>
         </div>
@@ -484,7 +493,7 @@
           <label class="block text-xs font-semibold text-neutral-300 mb-1">
             AI 生圖 Prompt 紀錄 (英文)
           </label>
-          <input type="text" id="form-prompt-en" placeholder="Editorial photo of upcycled..."
+          <input type="text" id="form-prompt-en" placeholder="High-end product still life of upcycled..."
             class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs font-mono text-emerald-300 outline-none">
         </div>
 
@@ -492,7 +501,7 @@
           <label class="block text-xs font-semibold text-neutral-300 mb-1">
             Prompt 中文註解
           </label>
-          <input type="text" id="form-prompt-zh" placeholder="時尚大片寫真..."
+          <input type="text" id="form-prompt-zh" placeholder="高級靜物攝影..."
             class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-3 py-2 text-xs text-neutral-300 outline-none">
         </div>
 

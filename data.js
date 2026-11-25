@@ -1,4 +1,4 @@
-// RE:CLOTHES 拾衣研究所 - 多語系資料庫 (Multilingual Database: zh-TW / en / ja)
+// RE:CLOTHES 拾衣研究所 - 多語系資料庫 (含衣物與配飾改造、AI 概念模擬圖)
 
 const PRESET_CASES = [
   {
@@ -8,6 +8,8 @@ const PRESET_CASES = [
     estimatedTime: "45 分鐘",
     coverColor: "from-blue-600/20 to-indigo-900/40",
     icon: "shirt",
+    beforeImage: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
     translations: {
       "zh-TW": {
         originalItem: "寬鬆落肩格紋襯衫",
@@ -114,6 +116,8 @@ const PRESET_CASES = [
     estimatedTime: "90 分鐘",
     coverColor: "from-sky-700/20 to-blue-950/40",
     icon: "briefcase",
+    beforeImage: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
     translations: {
       "zh-TW": {
         originalItem: "褪色直筒老爹牛仔褲",
@@ -217,6 +221,8 @@ const PRESET_CASES = [
     estimatedTime: "30 分鐘",
     coverColor: "from-stone-400/20 to-neutral-800/40",
     icon: "sparkles",
+    beforeImage: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
     translations: {
       "zh-TW": {
         originalItem: "領口鬆弛變形素面白T恤",
@@ -323,6 +329,8 @@ const PRESET_CASES = [
     estimatedTime: "120 分鐘",
     coverColor: "from-zinc-600/20 to-slate-900/50",
     icon: "scissors",
+    beforeImage: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80",
     translations: {
       "zh-TW": {
         originalItem: "過時寬肩長版雙排扣西裝",
@@ -429,6 +437,8 @@ const PRESET_CASES = [
     estimatedTime: "60 分鐘",
     coverColor: "from-rose-800/20 to-stone-900/40",
     icon: "layers",
+    beforeImage: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
     translations: {
       "zh-TW": {
         originalItem: "過緊碎花長版雪紡洋裝",
@@ -535,6 +545,8 @@ const PRESET_CASES = [
     estimatedTime: "40 分鐘",
     coverColor: "from-amber-700/20 to-neutral-900/50",
     icon: "feather",
+    beforeImage: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?auto=format&fit=crop&w=800&q=80",
     translations: {
       "zh-TW": {
         originalItem: "洗水縮水變形粗針織毛衣",
@@ -633,10 +645,326 @@ const PRESET_CASES = [
         }
       }
     }
+  },
+  // ==================== 閒置配飾專屬案例 (Accessories Remake) ====================
+  {
+    id: "case-7",
+    category: "閒置配飾",
+    difficulty: "新手友好",
+    estimatedTime: "25 分鐘",
+    coverColor: "from-fuchsia-600/20 to-purple-950/40",
+    icon: "sparkles",
+    beforeImage: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    translations: {
+      "zh-TW": {
+        originalItem: "印花繁複過時真絲長方巾",
+        remakeDirection: "法式絲巾雲朵手提小包 × 復古大腸髮圈",
+        categoryName: "閒置配飾",
+        difficultyName: "新手友好",
+        estimatedTime: "25 分鐘",
+        painPoints: [
+          "老式復古滿版花紋繫在脖子上容易顯老氣，平時穿搭難以駕馭",
+          "真絲質地光滑極易滑落遺失，且保養繁瑣長年收在抽屜深處",
+          "面料高級光澤柔美，棄之極為可惜"
+        ],
+        stylingSuggestions: [
+          "【手袋提把纏繞法】：將改造後的絲巾小包作為隨身配件，或直接將髮圈繫在純黑托特包提把上，增添法式慵懶貴氣感。",
+          "【極簡穿搭亮點】：穿著一身全白T恤或卡其西裝套裝時，以手腕上的真絲手作髮圈或雲朵包作為全身唯一的視覺色彩重心。"
+        ],
+        remakeConcept: {
+          tools: ["粗彈力髮圈 2 個", "金屬壓夾 / 金屬細鏈條", "免針線打結器", "安全別針"],
+          steps: [
+            "【免剪裁風車折角法】：將長方巾平鋪對折為正方形，四個對角各打一個小死結，形成天然的立體收納內囊。",
+            "【組裝雲朵提把】：將兩側結角穿過金屬手挽環或金屬鏈條，拉緊後即刻變身一只蓬鬆柔軟的晚宴雲朵小廢包。",
+            "【餘布改製大腸髮圈】：若有裁切多餘長條，穿入鬆緊帶並將兩端藏針縫合，即可獲得一條不咬頭髮的真絲護髮大腸圈。"
+          ],
+          proTip: "此改造完全「零剪裁、不傷真絲」，拆開後隨時可復原成原本的絲巾，隨心所欲變換用途！"
+        },
+        promptRecord: {
+          promptEn: "High-end product still life photography of a luxury mini pouch and scrunchie upcycled from vintage patterned silk scarf, accented with delicate gold chain strap, sitting on marble tabletop, morning natural light --ar 1:1 --v 6.0",
+          promptZh: "高級靜物攝影：一只由復古印花真絲絲巾重製的手提雲朵小包與大腸髮圈，點綴精緻金色鏈條，置於大理石檯面，晨間柔和自然光。",
+          engine: "Midjourney v6.0",
+          purpose: "驗證真絲面料折疊打結為手袋時的光澤折射與立體感"
+        }
+      },
+      "en": {
+        originalItem: "Vintage Patterned Silk Scarf",
+        remakeDirection: "French Cloud Pouch & Silk Hair Scrunchie Set",
+        categoryName: "Accessories",
+        difficultyName: "Beginner",
+        estimatedTime: "25 mins",
+        painPoints: [
+          "Intricate vintage prints look dated and matronly when tied around the neck",
+          "Smooth luxury silk constantly slips off shoulders, ending up forgotten in drawers",
+          "High-grade mulberry silk has beautiful luster—too precious to discard"
+        ],
+        stylingSuggestions: [
+          "【Bag Charm & Carry】：Carry as a mini cloud wristlet or knot the scrunchie around plain leather totes for instant Parisian flair.",
+          "【Minimalist Pop of Color】：Pair with head-to-toe white cotton tees or relaxed beige linen suits to let the silk luster take center stage."
+        ],
+        remakeConcept: {
+          tools: ["2 Elastic hair ties", "Gold mini chain strap", "Safety pin / Ring buckle"],
+          steps: [
+            "【Zero-Cut Origami Knotting】：Fold the scarf in half into a square; tie four corner knots inward to form a dimensional pouch cavity.",
+            "【Attach Chain Handles】：Thread opposite corner knots through gold O-rings, cinching into a puffy cloud evening pouch.",
+            "【Make Silk Scrunchie】：Thread remaining silk strip over an elastic band and slip-stitch ends to create a gentle, anti-breakage hair scrunchie."
+          ],
+          proTip: "100% zero-cut and reversible! Untie the knots anytime to restore the original silk scarf without damage."
+        },
+        promptRecord: {
+          promptEn: "High-end product still life photography of a luxury mini pouch and scrunchie upcycled from vintage patterned silk scarf, accented with delicate gold chain strap, sitting on marble tabletop, morning natural light --ar 1:1 --v 6.0",
+          promptZh: "Luxury still life: silk cloud pouch and scrunchie upcycled from vintage scarf with gold accents.",
+          engine: "Midjourney v6.0",
+          purpose: "Validate silk folding geometry and luster refraction as luxury accessories"
+        }
+      },
+      "ja": {
+        originalItem: "派手なヴィンテージシルクスカーフ",
+        remakeDirection: "フレンチシルククラウドバッグ ＆ ヘアシュシュセット",
+        categoryName: "閒置配飾",
+        difficultyName: "初心者向け",
+        estimatedTime: "25 分",
+        painPoints: [
+          "大判の花柄・幾何学模様が首に巻くとマダム風になりすぎて日常使いしにくい",
+          "ツルツルと滑り落ちやすく、いつの間にかタンスの奥に眠っていた",
+          "上質なシルク100%の光沢と肌触りが美しく、捨てるのはあまりにも惜しい"
+        ],
+        stylingSuggestions: [
+          "【バッグのアクセント】：完成したミニバッグを腕に提げるか、無地のレザートートに結んでパリジェンヌ風のアクセントに。",
+          "【シンプルコーデの主役に】：白Tシャツやリネンセットアップなど、ミニマルな服装の唯一の差し色として活用。"
+        ],
+        remakeConcept: {
+          tools: ["太めのヘアゴム 2個", "ゴールドチェーン金具", "安全ピン / 丸カン"],
+          steps: [
+            "【針糸不要！風呂敷折り結び】：スカーフを正方形に折り、四隅の内側に結び目を作って自然な袋状の立体を作ります。",
+            "【チェーンの取り付け】：結び目をゴールドのリング金具に通して固定すれば、ふんわり柔らかなパーティーミニバッグに。",
+            "【シルクシュシュ】：余ったリボン生地にゴムを通せば、髪に優しいシルクシュシュも同時に完成します。"
+          ],
+          proTip: "布を一切切らないため、いつでも元のスカーフに戻せるリバーシブルな安心リメイクです！"
+        },
+        promptRecord: {
+          promptEn: "High-end product still life photography of a luxury mini pouch and scrunchie upcycled from vintage patterned silk scarf, accented with delicate gold chain strap, sitting on marble tabletop, morning natural light --ar 1:1 --v 6.0",
+          promptZh: "ヴィンテージスカーフをリメイクしたシルクミニバッグとシュシュの静物写真。",
+          engine: "Midjourney v6.0",
+          purpose: "シルクの結び目による立体的なギャザーと上品な光沢感の確認"
+        }
+      }
+    }
+  },
+  {
+    id: "case-8",
+    category: "閒置配飾",
+    difficulty: "微工藝",
+    estimatedTime: "35 分鐘",
+    coverColor: "from-amber-800/20 to-stone-900/40",
+    icon: "briefcase",
+    beforeImage: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
+    translations: {
+      "zh-TW": {
+        originalItem: "磨損長度不合厚實硬皮皮帶",
+        remakeDirection: "工藝黃銅鑰匙掛繩 × 露營相機提帶",
+        categoryName: "閒置配飾",
+        difficultyName: "微工藝",
+        estimatedTime: "35 分鐘",
+        painPoints: [
+          "腰圍尺寸改變或打孔過多導致皮帶尾端過長垂掛，極不美觀",
+          "皮帶扣環周圍局部磨損龜裂，無法再作為正裝配件穿戴",
+          "厚實植鞣真牛皮質料極佳，丟掉十分可惜"
+        ],
+        stylingSuggestions: [
+          "【工裝褲腰間掛扣】：將改造後的黃銅皮扣鑰匙繩掛在牛仔褲或軍綠工裝褲的腰帶環上，金屬與深色皮質碰撞出俐落山系風格 (Gorpcore)。",
+          "【隨身相機/水壺掛繩】：搭配旁軸相機或保溫瓶，散發隨性耐看的重磅手作匠人氣質。"
+        ],
+        remakeConcept: {
+          tools: ["皮革打孔沖子", "皮革厚剪或美工刀", "純黃銅彈簧扣 2 個", "固定鉚釘與鉚釘槌"],
+          steps: [
+            "【截取完整皮段】：避開磨損嚴重的扣眼部位，截取兩段 18 公分與 25 公分平整厚實的皮帶身段。",
+            "【削薄與打孔】：在皮帶兩端折合處以美工刀稍微削薄內層厚度，用沖子打出 3mm 鉚釘孔。",
+            "【組裝黃銅扣】：穿入純黃銅旋轉鑰匙扣與 D 型環，合攏後敲入古銅色金屬鉚釘牢固固定，邊緣塗抹天然蜂蠟拋光。"
+          ],
+          proTip: "皮帶切口毛邊可用粗砂紙輕磨後，用棉花棒沾一點清水或皮革封邊劑反覆擦拭，立即展現專櫃級工藝圓弧光澤！"
+        },
+        promptRecord: {
+          promptEn: "Artisanal leather craft product photo: durable key lanyards and camera strap handcrafted from upcycled thick distressed brown leather belt, vintage solid brass hardware, rustic workbench background --ar 1:1 --v 6.0",
+          promptZh: "手工皮件工藝展示：由改造厚實棕色磨損牛皮皮帶重製的耐用鑰匙掛繩與相機帶，純黃銅復古五金配件，質樸手作工作台背景。",
+          engine: "Midjourney v6.0",
+          purpose: "評估老舊植鞣革重製為小五金配件後的手作硬挺質感"
+        }
+      },
+      "en": {
+        originalItem: "Worn Heavyweight Leather Belt",
+        remakeDirection: "Brass Hardware Key Lanyard & Camera Carry Strap",
+        categoryName: "Accessories",
+        difficultyName: "Light Craft",
+        estimatedTime: "35 mins",
+        painPoints: [
+          "Awkward length after waist change leaves excessive belt tail dangling",
+          "Localized leather cracking near buckle makes it unwearable for smart outfits",
+          "Premium vegetable-tanned thick leather is too durable to throw away"
+        ],
+        stylingSuggestions: [
+          "【Utility Belt Loop Clip】：Clip the brass leather lanyard to denim or olive cargo pant loops for rugged Gorpcore styling.",
+          "【Artisan Camera Strap】：Use as a wrist strap for vintage rangefinders or insulated bottles for an authentic outdoor aesthetic."
+        ],
+        remakeConcept: {
+          tools: ["Leather hole punch", "Utility blade", "2 Solid brass snap hooks", "Rivets & mallet"],
+          steps: [
+            "【Trim Intact Segments】：Bypass stretched buckle holes; cut two clean 18cm and 25cm leather segments.",
+            "【Skive & Punch】：Lightly skive fold-over ends for reduced bulk; punch 3mm holes using leather punch.",
+            "【Rivet Hardware】：Insert solid brass swivel snap and D-ring, hammer metal rivets firmly, and burnish raw edges with beeswax."
+          ],
+          proTip: "Sand cut edges smoothly with 400-grit sandpaper and rub with a damp cotton swab for a polished bespoke finish!"
+        },
+        promptRecord: {
+          promptEn: "Artisanal leather craft product photo: durable key lanyards and camera strap handcrafted from upcycled thick distressed brown leather belt, vintage solid brass hardware, rustic workbench background --ar 1:1 --v 6.0",
+          promptZh: "Artisanal leathercraft: durable key lanyard and strap made from upcycled vintage leather belt with solid brass snaps.",
+          engine: "Midjourney v6.0",
+          purpose: "Assess rugged texture of upcycled vegetable-tanned leather combined with brass hardware"
+        }
+      },
+      "ja": {
+        originalItem: "サイズが合わず擦れた本革ベルト",
+        remakeDirection: "真鍮製キーホルダー ＆ カメラリストストラップ",
+        categoryName: "閒置配飾",
+        difficultyName: "ミニクラフト",
+        estimatedTime: "35 分",
+        painPoints: [
+          "体型変化でサイズが合わず、余ったベルトの端が長く垂れ下がってしまう",
+          "バックル付近の革がひび割れ、スーツや正装には合わせられなくなった",
+          "肉厚な本牛革（植物タンニン鞣し）の上質素材なので、捨てるのは惜しい"
+        ],
+        stylingSuggestions: [
+          "【ベルトループに引っ掛けて】：デニムやカーゴパンツの腰回りに真鍮フックを引っ掛け、無骨なワークスタイル（Gorpcore）を演出。",
+          "【カメラストラップ】：クラシックカメラのストラップや水筒ホルダーとして使えば、経年変化を楽しめる味のあるギアに。"
+        ],
+        remakeConcept: {
+          tools: ["穴あけポンチ", "カッターナイフ", "真鍮ナスカン 2個", "カシメ金具とハンマー"],
+          steps: [
+            "【綺麗な部分を切り出し】：傷んだバックル穴を避け、18cmと25cmの平らで丈夫な革パーツを切り出します。",
+            "【革漉きと穴あけ】：折り返す部分の革を少し削って薄くし、ポンチで3mmの穴を開けます。",
+            "【真鍮パーツの固定】：真鍮のナスカンを通し、カシメ金具を打ち込んで固定。切断面にみつろうを塗って磨きます。"
+          ],
+          proTip: "切断面を紙やすりで軽く整えてから水を含ませた綿棒でこするだけで、プロのような滑らかなコバに仕上がります！"
+        },
+        promptRecord: {
+          promptEn: "Artisanal leather craft product photo: durable key lanyards and camera strap handcrafted from upcycled thick distressed brown leather belt, vintage solid brass hardware, rustic workbench background --ar 1:1 --v 6.0",
+          promptZh: "古びた本革ベルトをリメイクしたキーホルダーと真鍮金具のクラフト物撮り写真。",
+          engine: "Midjourney v6.0",
+          purpose: "肉厚レザーとヴィンテージ真鍮金具の質感・耐久性の調和確認"
+        }
+      }
+    }
+  },
+  {
+    id: "case-9",
+    category: "閒置配飾",
+    difficulty: "新手友好",
+    estimatedTime: "30 分鐘",
+    coverColor: "from-teal-700/20 to-emerald-950/40",
+    icon: "sparkles",
+    beforeImage: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80",
+    afterImage: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
+    translations: {
+      "zh-TW": {
+        originalItem: "腳後跟踩破泛黃經典帆布鞋",
+        remakeDirection: "水洗植物刺繡一腳蹬穆勒休閒拖鞋",
+        categoryName: "閒置配飾",
+        difficultyName: "新手友好",
+        estimatedTime: "30 分鐘",
+        painPoints: [
+          "穿脫時習慣踩後跟，導致腳後跟內襯塑料硬片壓斷、磨腳刺痛無法穿著",
+          "鞋面白帆布局部泛黃，鞋型失去原本挺拔的運動感",
+          "橡膠大底依然防滑耐磨，整雙丟掉十分可惜"
+        ],
+        stylingSuggestions: [
+          "【隨性露踝穿搭】：穆勒半拖鞋型解放腳後跟，搭配九分闊腿牛仔褲或棉麻寬褲，露出纖細腳踝，視覺極顯隨性輕盈。",
+          "【日系森系風格】：搭配純棉素色中筒襪或直接赤腳穿著，散發無拘無束的 CityWalk 漫步度假感。"
+        ],
+        remakeConcept: {
+          tools: ["厚剪刀", "布料包邊條 0.5 米", "手縫針線", "植物刺繡貼或防水彩繪筆"],
+          steps: [
+            "【後跟平整剪除】：取出鞋墊，沿著腳踝骨兩側水平向後剪開，切除破損內折的後跟包覆部，改造成露跟穆勒拖鞋廓形。",
+            "【切口包邊防磨】：在剪開的帆布邊緣縫上同色系棉質包邊條，遮蓋內部橡膠夾層並防止磨腳。",
+            "【鞋面刺繡改造】：在原本泛黃或污漬的鞋頭兩側，手縫極簡植物枝葉刺繡貼或用防水墨水畫上手繪線條，掩蓋瑕疵。"
+          ],
+          proTip: "剪後跟時沿著原本鞋幫的弧形車縫線留 0.5 公分裕量，剪完後再用針線將鞋墊邊緣固定在鞋底，穿著時鞋墊才不會向前滑動！"
+        },
+        promptRecord: {
+          promptEn: "Editorial fashion flatlay of custom mule sneakers upcycled from worn canvas sneakers, open-back slip-on silhouette, neat bias tape binding, delicate olive branch embroidery on toe cap, clean aesthetic --ar 1:1 --v 6.0",
+          promptZh: "時尚平鋪展示：由磨損帆布鞋改造重構的露跟穆勒休閒鞋，俐落滾邊收口，鞋頭帶有細緻橄欖枝刺繡，純淨日系自然美學。",
+          engine: "Midjourney v6.0",
+          purpose: "預覽切除後跟後的穆勒鞋型線條與鞋面刺繡之和諧度"
+        }
+      },
+      "en": {
+        originalItem: "Crushed-Heel Distressed Canvas Sneakers",
+        remakeDirection: "Open-Back Embroidered Canvas Mule Slip-Ons",
+        categoryName: "Accessories",
+        difficultyName: "Beginner",
+        estimatedTime: "30 mins",
+        painPoints: [
+          "Stepping on heels cracked the inner plastic counter, causing severe blisters",
+          "White canvas upper has yellowed stains, losing crisp sporty aesthetic",
+          "Rubber waffle outsoles are still in great condition—too durable to waste"
+        ],
+        stylingSuggestions: [
+          "【Ankle-Baring Casual】：Open-back mule silhouette frees heels; pair with cropped wide-leg denim to highlight ankles for an airy feel.",
+          "【Japanese Relaxed Style】：Pair with ribbed cotton crew socks or wear barefoot for effortless Citywalk leisure."
+        ],
+        remakeConcept: {
+          tools: ["Heavy-duty shears", "0.5m Bias tape binding", "Needle & heavy thread", "Botanical embroidered patches"],
+          steps: [
+            "【Cut Away Damaged Heel】：Remove insole and cut horizontally along ankle line, discarding crushed heel counter to form mule shape.",
+            "【Bind Raw Edges】：Wrap raw canvas edge with cotton bias binding and stitch securely to seal internal rubbers.",
+            "【Conceal Stains with Embroidery】：Stitch delicate olive branch patches over yellowed toe areas to disguise flaws creatively."
+          ],
+          proTip: "Tack down the insole heel to the footbed with two invisible stitches so the insole doesn't slide forward when walking!"
+        },
+        promptRecord: {
+          promptEn: "Editorial fashion flatlay of custom mule sneakers upcycled from worn canvas sneakers, open-back slip-on silhouette, neat bias tape binding, delicate olive branch embroidery on toe cap, clean aesthetic --ar 1:1 --v 6.0",
+          promptZh: "Editorial flatlay: custom mule sneakers upcycled from worn canvas shoes with neat bias binding and leaf embroidery.",
+          engine: "Midjourney v6.0",
+          purpose: "Preview open-back mule silhouette and embroidery balance"
+        }
+      },
+      "ja": {
+        originalItem: "かかとを踏んで潰れたキャンバススニーカー",
+        remakeDirection: "かかとフリー・ボタニカル刺繍バブーシュスニーカー",
+        categoryName: "閒置配飾",
+        difficultyName: "初心者向け",
+        estimatedTime: "30 分",
+        painPoints: [
+          "かかとを踏んで履いたため中の芯材が割れ、履くたびに擦れて痛い",
+          "アッパーのキャンバスが黄ばんでしまい、スニーカーとしての清潔感が低下",
+          "ゴムソールはまだまだ擦り減っておらず、捨てるにはもったいない"
+        ],
+        stylingSuggestions: [
+          "【足首見せ抜け感コーデ】：かかとのないミュール仕様で足元すっきり。アンクル丈のワイドパンツやリネンスカートと好相性。",
+          "【ソックス合わせ】：白のローゲージソックスと合わせたり、素足でラフに履いて休日のリゾート気分を満喫。"
+        ],
+        remakeConcept: {
+          tools: ["万能ハサミ", "綿バイアステープ 0.5m", "手縫い針と太糸", "植物刺繍ワッペン"],
+          steps: [
+            "【かかとの切除】：インソールを外し、足首のラインに沿って潰れたかかと部分を半円状に切り落とします。",
+            "【バイアス縁取り】：切り口にバイアステープをかぶせてまつり縫いし、断面を綺麗に保護します。",
+            "【刺繍でシミ隠し】：黄ばみや汚れの気になるつま先部分に、オリーブの枝など繊細な刺繍ワッペンを縫い付けます。"
+          ],
+          proTip: "切除後、インソールのかかと部分を靴底に2針ほど縫い留めておくと、歩行時にインソールがずれません！"
+        },
+        promptRecord: {
+          promptEn: "Editorial fashion flatlay of custom mule sneakers upcycled from worn canvas sneakers, open-back slip-on silhouette, neat bias tape binding, delicate olive branch embroidery on toe cap, clean aesthetic --ar 1:1 --v 6.0",
+          promptZh: "潰れたスニーカーをバブーシュ風ミュールにリメイクした平置き写真。",
+          engine: "Midjourney v6.0",
+          purpose: "ミュールシルエットのラインと刺繍デザインの調和確認"
+        }
+      }
+    }
   }
 ];
 
-// 多語系快速輸入範例 (Multilingual sample inputs for trial area)
+// 多語系快速輸入範例 (含衣物與配飾)
 const SAMPLE_INPUTS = {
   "zh-TW": [
     {
@@ -647,24 +975,24 @@ const SAMPLE_INPUTS = {
       mode: "結構微改"
     },
     {
-      name: "腰圍過緊拉不上的碎花連身洋裝",
-      materialColor: "米底小雛菊印花 / 雪紡紗",
-      painPoint: "後背拉鍊拉到一半就卡住，滿版碎花大面積穿太甜膩像鄉村風",
-      targetStyle: "法式輕熟甜酷 / 兩件式混搭",
-      mode: "徹底翻新"
+      name: "印花過時老氣的長條真絲絲巾",
+      materialColor: "莫蘭迪復古印花 / 100%桑蠶絲",
+      painPoint: "繫在脖子上像老式空姐顯老氣，平時穿搭派不上用場，收在抽屜積灰塵",
+      targetStyle: "法式輕奢手作 / 抓夾雲朵包",
+      mode: "結構微改"
     },
     {
-      name: "領口穿洗到變成荷葉邊的素白短T",
-      materialColor: "純白色 / 24支精梳純棉",
-      painPoint: "領口變形下垂看起來像穿了十年的睡衣，但布料很軟捨不得丟",
-      targetStyle: "法式俐落優雅 / 顯鎖骨精緻風",
-      mode: "穿搭搭配"
+      name: "長度不合且皮質偏硬的磨損老皮帶",
+      materialColor: "深焦糖棕色 / 厚實植鞣牛皮",
+      painPoint: "腰圍不合尾端拖太長，扣頭磨損但牛皮厚實硬挺捨不得丟",
+      targetStyle: "美式復古工裝 / 山系鑰匙相機掛繩",
+      mode: "微工藝"
     },
     {
-      name: "二手市集淘來的厚重雙排扣西裝外套",
-      materialColor: "深灰細千鳥格 / 羊毛混紡",
-      painPoint: "墊肩超級寬厚像橄欖球員，衣長蓋屁股完全沒有腰身",
-      targetStyle: "冷淡極簡風 / 時髦短版露腰",
+      name: "腳後跟踩爛塑膠片斷裂的帆布鞋",
+      materialColor: "純白水洗帆布 / 橡膠底",
+      painPoint: "踩後跟導致塑膠內襯斷裂刺腳，鞋頭有些微泛黃不願穿出門",
+      targetStyle: "日系慵懶度假 / 刺繡穆勒休閒拖",
       mode: "結構微改"
     }
   ],
@@ -677,24 +1005,24 @@ const SAMPLE_INPUTS = {
       mode: "結構微改"
     },
     {
-      name: "Tight daisy print maxi dress that won't zip",
-      materialColor: "Cream floral / Lightweight Chiffon",
-      painPoint: "Back zipper gets stuck halfway; all-over florals feel overly sweet or dated",
-      targetStyle: "French Chic Co-ord / Sweet & Tough",
-      mode: "徹底翻新"
+      name: "Vintage patterned luxury silk scarf",
+      materialColor: "Floral Paisley / 100% Mulberry Silk",
+      painPoint: "Looks too mature tied around neck; slips off easily and forgotten in drawers",
+      targetStyle: "French Cloud Pouch & Hair Ring Set",
+      mode: "結構微改"
     },
     {
-      name: "Washed-out white tee with stretched bacon collar",
-      materialColor: "Crisp White / 100% Combed Cotton",
-      painPoint: "Wavy collar looks like worn-out pajamas, but cotton is too soft to discard",
-      targetStyle: "Parisian Clean Cut / Square Neck Accent",
-      mode: "穿搭搭配"
+      name: "Worn oversized heavyweight leather belt",
+      materialColor: "Caramel Brown / Veg-Tanned Bull Leather",
+      painPoint: "Length no longer fits; leather cracked near buckle but hide is super durable",
+      targetStyle: "Gorpcore Brass Key Lanyard & Camera Strap",
+      mode: "微工藝"
     },
     {
-      name: "Thrifted oversized vintage wool blazer",
-      materialColor: "Charcoal Houndstooth / Wool Blend",
-      painPoint: "Massive shoulder pads make me look like an 80s athlete with zero waistline",
-      targetStyle: "Minimalist Runway / Cropped Midriff",
+      name: "Crushed-heel white canvas sneakers",
+      materialColor: "Washed White Canvas / Waffle Sole",
+      painPoint: "Heel counter is snapped and rubs blisters; canvas slightly yellowed",
+      targetStyle: "Open-Back Embroidered Mule Slip-Ons",
       mode: "結構微改"
     }
   ],
@@ -707,24 +1035,24 @@ const SAMPLE_INPUTS = {
       mode: "結構微改"
     },
     {
-      name: "ファスナーが上がらない小花柄ロングワンピース",
-      materialColor: "アイボリー地マーガレット柄 / シフォン",
-      painPoint: "背中のチャックが途中で止まる。全身花柄だと甘すぎて着回しにくい",
-      targetStyle: "フレンチモード / 甘辛2ピース",
-      mode: "徹底翻新"
+      name: "派手なヴィンテージシルクスカーフ",
+      materialColor: "レトロ花柄 / シルク100%",
+      painPoint: "首に巻くとマダム風になり日常使いしにくい。タンスの奥に眠っていた",
+      targetStyle: "フレンチシルクバッグ ＆ ヘアシュシュ",
+      mode: "結構微改"
     },
     {
-      name: "首回りがヨレヨレになった白Tシャツ",
-      materialColor: "ピュアホワイト / 上質コットン",
-      painPoint: "リブが波打ってだらしない印象。でも生地が柔らかくて捨てるのは惜しい",
-      targetStyle: "フレンチカジュアル / 鎖骨スッキリ",
-      mode: "穿搭搭配"
+      name: "サイズが合わず擦れた本革ベルト",
+      materialColor: "キャラメルブラウン / 厚手牛革",
+      painPoint: "サイズが合わず端が垂れ下がる。革が丈夫で捨てるには惜しい",
+      targetStyle: "真鍮製キーホルダー ＆ リストストラップ",
+      mode: "微工藝"
     },
     {
-      name: "古着屋で買った肩パッド入りダブルジャケット",
-      materialColor: "チャコールグレー千鳥格子 / ウール混紡",
-      painPoint: "肩パッドが厳つくウエストのくびれが全くない",
-      targetStyle: "ミニマルモード / クロップド丈",
+      name: "かかとを踏んで潰れた白キャンバススニーカー",
+      materialColor: "オフホワイト / キャンバス地",
+      painPoint: "かかとの芯が割れて靴擦れする。全体的に少し黄ばんでいる",
+      targetStyle: "ボタニカル刺繍バブーシュ風ミュール",
       mode: "結構微改"
     }
   ]
